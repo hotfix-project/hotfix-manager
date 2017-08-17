@@ -1,0 +1,15 @@
+{
+  "vendor": {
+    "js": "/static/scripts/vendor.9cb2622f.js"
+  },
+  "login": {
+    "js": "/static/scripts/login.0b4ffcfe.js"
+  },
+  "index": {
+    "js": "/static/scripts/index.b7afe920.js",
+    "css": "/static/style/index.a48a1a48.css"
+  },
+  "common": {
+    "js": "/static/scripts/common.d41d8cd9.js"
+  }
+}
