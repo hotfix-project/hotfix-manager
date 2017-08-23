@@ -20,7 +20,7 @@ import {mapGetters} from 'vuex';
 export default {
     name:'c-cHeader',
     created(){
-
+       this.getUserName();
     },
     data(){
         return {
