@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
+    "sit": "webpack-dev-server --config ./build/webpack.sit.conf.js",
     "build": "gulp",
     "server": "node build/server.js",
     "lint": "eslint 'src/**/*.@(js|jsx|es)'",
