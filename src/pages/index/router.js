@@ -1,20 +1,32 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import cookies from 'js-cookie';
+import login from './views/login/login.vue';
 import appList from './views/appList/appList.vue';
-import app from './views/app/app.vue';
-import details from './views/details/details.vue';
-import modifyPsw from './views/modifyPsw/modifyPsw.vue';
-import patchDetail from './views/patchDetail/patchDetail.vue';
 
-
-const login = resolve => {
-    require.ensure(['./views/login/login.vue'], () => {
-        resolve(require('./views/login/login.vue'))
-    }, 'login')
+const details = resolve => {
+    require.ensure(['./views/details/details.vue'], () => {
+        resolve(require('./views/details/details.vue'))
+    }, 'details')
 }
 
+const modifyPsw = resolve => {
+    require.ensure(['./views/modifyPsw/modifyPsw.vue'], () => {
+        resolve(require('./views/modifyPsw/modifyPsw.vue'))
+    }, 'modifyPsw')
+}
 
+const patchDetail = resolve => {
+    require.ensure(['./views/patchDetail/patchDetail.vue'], () => {
+        resolve(require('./views/patchDetail/patchDetail.vue'))
+    }, 'patchDetail')
+}
+
+const app = resolve => {
+    require.ensure(['./views/app/app.vue'], () => {
+        resolve(require('./views/app/app.vue'))
+    }, 'app')
+}
 // const demo = resolve => {
 //     require.ensure(['./views/demo/demo.vue'], () => {
 //         resolve(require('./views/demo/demo.vue'))
