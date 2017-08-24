@@ -15,7 +15,7 @@
                    <td>{{item.name}}</td>
                    <td v-for="item2 in systemsList" v-show="inquireSystem(item.system_id,item2)">{{item2.name}}</td>
                    <td>{{item.id}}</td>
-                   <td><router-link :to="'app?name='+encodeURIComponent(item.name)+'&id='+encodeURIComponent(item.id)" class="blue">管理</router-link></td>    
+                   <td><router-link :to="'app?id='+encodeURIComponent(item.id)" class="blue">管理</router-link></td>    
                 </tr>
             </table>
             </div>

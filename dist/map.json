@@ -1,15 +1,24 @@
 {
   "vendor": {
-    "js": "/static/scripts/vendor.9cb2622f.js"
-  },
-  "login": {
-    "js": "/static/scripts/login.0b4ffcfe.js"
+    "js": "/static/scripts/vendor.bacaa3cb.js"
   },
   "index": {
-    "js": "/static/scripts/index.b7afe920.js",
-    "css": "/static/style/index.a48a1a48.css"
+    "js": "/static/scripts/index.b945bb8d.js",
+    "css": "/static/style/index.ec9fedf3.css"
   },
   "common": {
     "js": "/static/scripts/common.d41d8cd9.js"
+  },
+  "patchDetail": {
+    "js": "/static/scripts/patchDetail.51538ae2.js"
+  },
+  "modifyPsw": {
+    "js": "/static/scripts/modifyPsw.fe2a64a6.js"
+  },
+  "details": {
+    "js": "/static/scripts/details.58541730.js"
+  },
+  "app": {
+    "js": "/static/scripts/app.8a525f20.js"
   }
 }

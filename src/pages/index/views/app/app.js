@@ -20,7 +20,7 @@ export default {
         secretFlag:true,
         categorysList:'',
         systemsList:'',
-        app_id:'',
+        id:'',
         rsaFlag:false,
         rsa:''
       }
@@ -47,12 +47,12 @@ export default {
             })
         },
         getAppDetail(){
-            this.name=decodeURIComponent(queryString("name"));
+            this.id=decodeURIComponent(queryString("id"));
             var self=this;
             this.$http.get(api.apps).then(function(res){
                 self.appList=res.body.results;
-                if(self.name=='null'){
-                  self.name=self.appList[0].name
+                if(self.id=='null'){
+                  self.id=self.appList[0].id
                 }
                 self.getVersionList()
             }).catch(function(res){
@@ -70,13 +70,9 @@ export default {
             this.dialogFlag=true;
        },
        getVersionList(){
-          this.app_id=encodeURIComponent(queryString("id"));
-          if(this.app_id=='null'){
-              this.app_id=this.appList[0].id;
-          }
           var self=this;
           self.$http({
-                url:api.versions+"?app_id="+this.app_id,
+                url:api.versions+"?app_id="+this.id,
                 method:"get"
             }).then(function(res){
                 self.versionsList=res.body.results
@@ -89,7 +85,7 @@ export default {
                 method:"post",
                 body:{
                     "name":this.name,
-                    "app_id":api.apps+"/"+this.app_id
+                    "app_id":api.apps+"/"+this.$refs.input1.value
                 }
             }).then(function(res){
                 if(res.status==201){
@@ -116,6 +112,9 @@ export default {
         close(){
           this.$overlay({show:false});
           this.rsaFlag=false;
+        },
+        aa(){
+          console.log(this.$refs.input1.value)
         }
     },
     components:{

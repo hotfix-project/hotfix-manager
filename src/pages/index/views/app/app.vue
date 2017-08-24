@@ -3,7 +3,7 @@
          <div>
             <div class="f22 pl20">应用管理</div>
             <div class="wrap">  
-                <table cellpadding="0" cellspacing="0" class="details" v-for="item in appList" v-show="item.name==name">
+                <table cellpadding="0" cellspacing="0" class="details" v-for="item in appList" v-show="item.id==id">
                       <tr>
                          <td class="w21">应用名称：{{item.name}}</td>
                          <td class="w25" v-for="item1 in categorysList" v-show="inquireSystem(item.category_id,item1)">应用类型：{{item1.name}}</td>
@@ -29,7 +29,7 @@
                          <td>{{item.name}}</td>
                          <td>{{item.create_time|filterTime}}</td>
                          <td>
-                            <router-link :to="'details?appId='+app_id+'&versionId='+item.id" class="blue">查看详情</router-link> 
+                            <router-link :to="'details?appId='+id+'&versionId='+item.id" class="blue">查看详情</router-link> 
                          </td>  
                       </tr>
                       <tr v-show="versionsList.length==0">
@@ -48,8 +48,8 @@
                         <form>
                             <div class="pt20">
                                 <label>*App Id:</label>
-                                <select name="" class="cursor">
-                                  <option value="" v-for="item in appList">{{item.name}}</option>
+                                <select name="" class="cursor" ref="input1" v-on:change="aa">
+                                  <option value="" v-for="item in appList" :value='item.id'>{{item.name}}</option>
                                 </select>
                             </div>
                             <div class="pt20 pb20">
