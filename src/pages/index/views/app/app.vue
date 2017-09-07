@@ -13,7 +13,7 @@
                       <tr>
                          <td>RSA秘钥：<i class="blue cursor" @click="checkFile">查看文件</i></td>
                          <td colspan="2">App Key：{{item.key}}</td>
-                         <td>App Secret：<span class="cursor" @click="secretFlag=false" v-if="secretFlag">************************</span><span v-else class="word-break">{{item.secret}}</span></td>
+                         <td>App Secret：<span class="cursor" v-if="secretFlag">{{item.secret|filterSecret}}</span><span v-else class="word-break">{{item.secret}}</span><span class="ml20 minBtn" @click="secretFlag=!secretFlag">{{secretFlag?'显示':'隐藏'}}</span></td>
                       </tr>
                   </table>
             </div>
@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="resDialog f16" v-show="rsaFlag">
-          <span class="resBox">{{rsa}}</span>
+          <span class="resBox">{{rsa?rsa:'暂无数据'}}</span>
           <span class="abs blue close" @click="close">关闭</span>
         </div>
   </div>
@@ -101,5 +101,6 @@
     .resBox{display:block;height:100%;overflow-x:hidden;overflow-y:auto;padding-right:8px;word-break:break-all}
       .close{right:10px;top:5px;}
       .word-break{word-break:break-all}
+      .minBtn{background:#f9f9f9;border-color:#ccc;}
 </style>
 <script src="./app.js"></script>

@@ -123,6 +123,9 @@ export default {
     filters:{
       filterTime(time){
             return time.replace(/[^0-9:-]/g,' ')
-        }
+        },
+      filterSecret(str){
+            return str.substr(0,1)+"******"+str.substr(str.length-1,1)
+      }
     }
 }
