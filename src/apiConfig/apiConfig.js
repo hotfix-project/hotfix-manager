@@ -1,4 +1,4 @@
-var baseUrl = 'http://172.28.32.102:8000/';  // 开发环境
+var baseUrl = 'http://172.28.32.101:8000/';  // 开发环境
 
 module.exports = {
     "apps": baseUrl + "apps", //应用列表
