@@ -80,6 +80,10 @@
                                 <label class="w100">*补丁描述:</label>
                                 <input type="text" name="name" placeholder="请输入20字以内的描述......" maxlength="20" v-model="desc">
                             </div>
+                            <div class="mb10">
+                                <label class="w100">*补丁MD5:</label>
+                                <input type="text" name="md5sum" placeholder="请输入补丁MD5" maxlength="32" v-model="md5sum">
+                            </div>
                            <!--  <div class="mb10">
                                 <label class="w100">*下载地址:</label>
                                 <input type="text" name="name" placeholder="请输入补丁下载地址" v-model="download_url">

@@ -136,6 +136,7 @@ export default {
                                     "version_id": api.versions+"/"+this.versionId,
                                     "size":this.fileSize,
                                     "desc":this.desc,
+                                    "md5sum":this.md5sum,
                                     "download_url":downloadUrl
                                 }
                             }).then(function(res){
