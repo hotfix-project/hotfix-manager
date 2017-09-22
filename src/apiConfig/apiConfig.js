@@ -1,5 +1,13 @@
 var baseUrl = 'http://172.28.32.102:8000/';  // 开发环境
 
+const ENV = process.env.NODE_ENV;
+if(ENV == 'production'){
+	console.log('env','production');
+}
+else if(ENV == 'sit'){
+	console.log('env','sit');
+}
+
 module.exports = {
     "apps": baseUrl + "apps", //应用列表
     "categorys": baseUrl + "categorys",//应用类型接口
