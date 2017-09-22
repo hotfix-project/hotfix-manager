@@ -1,11 +1,13 @@
-var baseUrl = 'http://172.28.32.101:8000/';  // 开发环境
+var baseUrl = 'http://172.28.32.102:8000/';  // 开发环境
 
 const ENV = process.env.NODE_ENV;
 if(ENV == 'production'){
 	console.log('env','production');
+	baseUrl = 'http://172.28.32.102:8000/';
 }
 else if(ENV == 'sit'){
 	console.log('env','sit');
+	baseUrl = 'http://172.28.32.102:8000/';
 }
 
 module.exports = {
