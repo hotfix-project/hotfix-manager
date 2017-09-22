@@ -119,7 +119,7 @@ export default {
                     url:api.upload,
                     method:"post",
                     headers:{
-                        "Uni-Source":" ipos/Android (com.qianbao.ipos)"
+                        "Uni-Source":" hotfix/H5 (Vue2)"
                     },
                     body:this.formData
                 }).then(function(res){
@@ -136,6 +136,7 @@ export default {
                                     "version_id": api.versions+"/"+this.versionId,
                                     "size":this.fileSize,
                                     "desc":this.desc,
+                                    "md5sum":this.md5sum,
                                     "download_url":downloadUrl
                                 }
                             }).then(function(res){

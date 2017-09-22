@@ -2,7 +2,7 @@
     <div class="cheader" v-show="show" :class="[classz]">
         <div class="left pt10">
             <p class="fw">HotFix</p>
-            <p class="f14">全平台热修复</p>
+            <p class="f14">移动平台热修复</p>
         </div>
         <div class="right">
             <a href="https://github.com/hotfix-project" class="rightIcon" target="_blank"></a>
