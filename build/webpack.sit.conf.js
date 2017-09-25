@@ -12,7 +12,6 @@ var aPlugin = [
     new CopyWebpackPlugin([{ from: 'src/static', to: 'static' }]),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('development'),
-        __DEV__: JSON.stringify(JSON.parse('true'))
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

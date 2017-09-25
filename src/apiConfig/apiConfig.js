@@ -1,4 +1,14 @@
-var baseUrl = 'http://172.28.32.101:8000/';  // 开发环境
+var baseUrl = '';  // 生产环境
+
+if(__DEV__){
+    baseUrl = 'http://172.28.32.101:8000/';
+}
+if(__SIT__){
+    baseUrl = 'http://172.28.32.102:8000/';
+}
+if(__PRE__){
+    baseUrl = '';
+}
 
 module.exports = {
     "apps": baseUrl + "apps", //应用列表

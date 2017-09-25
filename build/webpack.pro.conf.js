@@ -22,7 +22,6 @@ var aPlugin = [
     }),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production'),
-        __DEV__: JSON.stringify(JSON.parse('false'))
     }),
     new webpack.optimize.UglifyJsPlugin({
         compress: {
