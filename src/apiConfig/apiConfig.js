@@ -1,13 +1,12 @@
 var baseUrl = '';  // 生产环境
 
-if(__DEV__){
-    baseUrl = 'http://172.28.32.101:8000/';
+const ENV = process.env.NODE_ENV;
+if(ENV == 'dev'){
+	baseUrl = 'http://172.28.32.101:8000/';
 }
-if(__SIT__){
-    baseUrl = 'http://172.28.32.102:8000/';
-}
-if(__PRE__){
-    baseUrl = '';
+else if(ENV == 'sit'){
+	console.log('env','sit');
+	baseUrl = 'http://172.28.32.102:8000/';
 }
 
 module.exports = {

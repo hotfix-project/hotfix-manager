@@ -7,7 +7,7 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var aPlugin = [
-    new OpenBrowserPlugin({ url: 'http://localhost:' + config.dev.port }),
+    //new OpenBrowserPlugin({ url: 'http://localhost:' + config.dev.port }),
     //for dev show static images
     new CopyWebpackPlugin([{ from: 'src/static', to: 'static' }]),
     new webpack.DefinePlugin({

@@ -1,24 +1,24 @@
 {
   "vendor": {
-    "js": "/static/scripts/vendor.bacaa3cb.js"
+    "js": "/static/scripts/vendor.8307ff3b.js"
   },
   "index": {
-    "js": "/static/scripts/index.b945bb8d.js",
-    "css": "/static/style/index.ec9fedf3.css"
+    "js": "/static/scripts/index.f2718cfd.js",
+    "css": "/static/style/index.d6d1d600.css"
   },
   "common": {
     "js": "/static/scripts/common.d41d8cd9.js"
   },
   "patchDetail": {
-    "js": "/static/scripts/patchDetail.51538ae2.js"
+    "js": "/static/scripts/patchDetail.ba9ae4d9.js"
   },
   "modifyPsw": {
-    "js": "/static/scripts/modifyPsw.fe2a64a6.js"
+    "js": "/static/scripts/modifyPsw.8f109ab2.js"
   },
   "details": {
-    "js": "/static/scripts/details.58541730.js"
+    "js": "/static/scripts/details.0a569016.js"
   },
   "app": {
-    "js": "/static/scripts/app.8a525f20.js"
+    "js": "/static/scripts/app.3bb73532.js"
   }
 }
